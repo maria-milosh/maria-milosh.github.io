@@ -1,1 +1,114 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
+        <title>Your Name</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            /* Full-page background image - mobile friendly */
+            body {
+                background: url('assets/background.JPG') no-repeat center center;
+                background-size: cover;
+                font-family: "Urbanist", sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh; /* Ensures full height on mobile */
+                padding: 10px; /* Prevents content from touching screen edges */
+            }
+    
+            /* Solid frame for text */
+            .container {
+                background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+                padding: 20px;
+                max-width: 800px;
+                width: 90%; /* Ensures it shrinks on smaller screens */
+                text-align: left;
+                border-radius: 0px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            h1 {
+                margin-bottom: 15px;
+                font-size: 28px; /* Ensures good size on all screens */
+            }
+    
+            .links a {
+                display: block;
+                margin-top: 10px;
+                color: #0073e6;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+    
+            .links a:hover {
+                text-decoration: underline;
+            }
+
+            p, .links {
+                text-align: left; /* Left-aligns paragraphs and links */
+                width: 100%;
+            }  
+    
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                text-align: left; /* Center text for better mobile reading */
+            }
+    
+            /* Mobile-specific styles */
+            @media (max-width: 600px) {
+                .container {
+                    padding: 15px;
+                    width: 95%; /* Ensures it fits within the screen */
+                }
+    
+                h1 {
+                    font-size: 22px;
+                }
+    
+                p {
+                    font-size: 16px;
+                }
+    
+                .links a {
+                    font-size: 16px;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h2>Hi, I’m Maria Milosh</h2>
+        <br></br>
+        <p>I'm a policy researcher and strategic designer, specializing in local governance, civic institutions, and urban policy. I work with research institutions, local governments, NGOs, and development organizations to <strong>enhance empirical policy analysis and data-driven program evaluation.</strong>
+        <br></br> I get most excited when I get a chance to work on <strong>deliberative democracy and municipal self-governance</strong>.
+        <br></br>
+        Currently, I’m leading a capacity-building initiative at <a href="https://libertyforward.org" style="color: #0073e6; text-decoration: none" target="_blank">Liberty Forward</a> designed to <strong>support Russian democratically-minded, active emigrants, passionate about social good and democratic reforms in their home country.</strong> My goal is to empower them in pursuing education in public policy, governance, human rights, sustainable development, and gain professional experience to ultimately contribute to future reconstruction and reform efforts.
+        <br></br>
+        Something that you won’t see on my CV: I’m deeply involved in feminist organizing, human rights advocacy, community-driven fundraising, and DIY projects from zine-making to sound design that magnify voices of displaced and marginalized communities from Eastern Europe and Northern Asia.
+        <br></br>
+        <!-- I love film photography, slavic languages, and modular synthesizers.</p> -->
+        <!-- <br></br> -->
+        <div class="links">
+            <!-- <p>Connect with me:</p> -->
+            <a href="mailto:mariyamilosh@gmail.com">💌 Shoot me an email</a>
+            <a href="https://www.linkedin.com/in/maria-milosh/" target="_blank">👩‍💻 LinkedIn</a>
+            <a href="assets/Maria Milosh CV.pdf" target="_blank">📎 CV</a>
+            <!-- <a href="projects.html">⚙️ Projects</a> -->
+        </div>
+    </div>
+
+</body>
+</html>
