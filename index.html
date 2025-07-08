@@ -1,110 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
-        <title>Maria Milosh</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-    
-            /* Full-page background image - mobile friendly */
-            body {
-                background: url('assets/background.JPG') no-repeat center center;
-                background-size: cover;
-                font-family: "Urbanist", sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh; /* Ensures full height on mobile */
-                padding: 10px; /* Prevents content from touching screen edges */
-            }
-    
-            /* Solid frame for text */
-            .container {
-                background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-                padding: 20px;
-                max-width: 800px;
-                width: 90%; /* Ensures it shrinks on smaller screens */
-                text-align: left;
-                border-radius: 0px;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            h1 {
-                margin-bottom: 15px;
-                font-size: 28px; /* Ensures good size on all screens */
-            }
-    
-            .links a {
-                display: block;
-                margin-top: 10px;
-                color: #0073e6;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 18px;
-            }
-    
-            .links a:hover {
-                text-decoration: underline;
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maria Milosh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #0e0e1c;
+      color: #d4e2e2;
+    }
 
-            p, .links {
-                text-align: left; /* Left-aligns paragraphs and links */
-                width: 100%;
-            }  
-    
-            p {
-                font-size: 18px;
-                line-height: 1.5;
-                text-align: left; /* Center text for better mobile reading */
-            }
-    
-            /* Mobile-specific styles */
-            @media (max-width: 600px) {
-                .container {
-                    padding: 15px;
-                    width: 95%; /* Ensures it fits within the screen */
-                }
-    
-                h1 {
-                    font-size: 22px;
-                }
-    
-                p {
-                    font-size: 16px;
-                }
-    
-                .links a {
-                    font-size: 16px;
-                }
-            }
-        </style>
-    </head>
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #d4e2e2;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #22c9b8;
+    }
+
+    .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    }
+
+/* Hamburger icon */
+  .nav-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Hide the checkbox */
+  .nav-toggle {
+    display: none;
+  }
+
+  .profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .profile-photo {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .bio {
+    flex: 1;
+    min-width: 300px;
+    font-size: 20px;
+  }
+
+  .bio ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .bio ul li::before {
+    content: "➤";
+    color: #22c9b8;
+    margin-right: 0.5rem;
+  }
+
+  .bio h3 {
+      margin-top: 0rem;
+  }
+
+  .social {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .social a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 500;
+  }
+
+  .social a:hover {
+    color: #22c9b8;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  @media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: #0e0e1c;
+      padding: 1rem 0;
+      width: 100%;
+  }
+
+    .nav-icon {
+        display: block;
+  }
+
+    .nav-toggle:checked + .nav-icon + .nav-links {
+        display: flex;
+  }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+  }
+
+    nav a {
+        padding: 0.5rem 1rem;
+  }
+}
+  </style>
+</head>
 <body>
-    <div class="container">
-        <h2>Hi, I’m Maria Milosh</h2>
-        <br></br>
-        <p>I’m a policy analyst specializing in local governance, civic institutions, and strengthening democratic practices in the face of democratic backsliding. Based in New York and engaged internationally, I work with research institutions, local governments, (I)NGOs, and development organizations to <strong>enhance empirical policy analysis and data-driven program evaluation & learning.</strong>
-        <br></br>I get most excited when I get a chance to work on <strong>deliberative democracy and municipal self-governance</strong>. Coming from Eastern Europe, I value democratic resilience and bring hard-won insights into how civic institutions decline — and how to invest in their durability.
-        <br></br>I’m open to research and policy consultancies. I also accept small pro-bono clients from Eastern Europe and Central Asia working to advance good governance and human rights in the region.
-        <br></br>Something that you won’t see on my CV: I’m deeply involved in feminist organizing, human rights advocacy, community-driven fundraising, and DIY projects from zine-making to sound design that magnify voices of displaced and marginalized communities from Eastern Europe and Northern Asia.
-    </p>
-        <div class="links">
-            <!-- <p>Connect with me:</p> -->
-            <a href="mailto:mariyamilosh@gmail.com">💌 Shoot me an email</a>
-            <a href="https://www.linkedin.com/in/maria-milosh/" target="_blank">👩‍💻 LinkedIn</a>
-            <a href="assets/Maria Milosh CV.pdf" target="_blank">📎 CV</a>
-            <!-- <a href="projects.html">⚙️ Projects</a> -->
+
+  <div class="container">
+
+    <header>
+      <h1>Maria Milosh</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-icon">&#9776;</label>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="writing.html">Writing</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="profile">
+        <img src="assets/IMG_7839 2.JPG" alt="Maria Milosh portrait" class="profile-photo" />
+        <div class="bio">
+            <h3>I’m a policy researcher and strategic designer working on democratic innovation, civic institutions, and participatory governance.</h3>
+        <ul>
+            <li>I focus on design and evaluation of civic innovations, like citizens’ assemblies and participatory budgeting. I'm interested in building institutions that foster open dialogue and legitimacy through deliberative democracy and municipal self-governance.</li>
+            <br></br>
+            <li>Based in NYC and engaged internationally, I work with governments, nonprofits, and research institutions on data-driven policy and participatory practices.</li>
+            <br></br>
+            <li>Coming from Eastern Europe, I value democratic resilience and bring hard-won insights into how civic institutions decline — and how to invest in their durability. I’m open to research and policy consultancies and accept small pro-bono clients from Eastern Europe and Central Asia working to advance good governance and human rights in the region.</li>
+        </ul>
         </div>
-    </div>
+      </section>
+
+      <section class="social">
+        <a href="mailto:mariyamilosh@gmail.com">💌 Shoot me an email</a>
+        <a href="https://www.linkedin.com/in/maria-milosh/" target="_blank">👩‍💻 LinkedIn</a>
+        <a href="assets/Maria Milosh CV.pdf" target="_blank">📎 CV</a>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Maria Milosh
+    </footer>
+
+  </div>
 
 </body>
 </html>
