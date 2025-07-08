@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Writing | Maria Milosh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #0e0e1c;
+      color: #d4e2e2;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #d4e2e2;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #22c9b8;
+    }
+
+    .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Hamburger icon */
+.nav-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hide the checkbox */
+.nav-toggle {
+  display: none;
+}
+
+    main {
+      margin-top: 2rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+      color: #d4e2e2;
+      margin-bottom: 2rem;
+    }
+
+    .writing-entry {
+      margin-bottom: 2.5rem;
+    }
+
+    .writing-entry h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: #22c9b8;
+    }
+
+    .writing-entry p {
+      margin: 0.2rem 0 0.4rem;
+      font-size: 1.3rem;
+    }
+
+    .writing-entry a {
+      text-decoration: none;
+      color: #22c9b8;
+      font-weight: 500;
+    }
+
+    .writing-entry a:hover {
+      color: #22c9b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #d4e2e2;
+    }
+
+    @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #0e0e1c;
+        padding: 1rem 0;
+        width: 100%;
+  }
+
+    .nav-icon {
+        display: block;
+  }
+
+    .nav-toggle:checked + .nav-icon + .nav-links {
+        display: flex;
+  }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+  }
+
+    nav a {
+        padding: 0.5rem 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+        <h1>Maria Milosh</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-icon">&#9776;</label>
+        <nav class="nav-links">
+          <a href="index.html">About</a>
+          <a href="writing.html">Writing</a>
+          <a href="projects.html">Projects</a>
+        </nav>
+    </header> 
+
+      <h2>Writing</h2>
+      <p class="intro"> <em>Essays, commentary, and research on democratic innovation, civic institutions, and policy.</em></p>
+
+    <section class="writing-entry">
+        <h2><a href="https://doxa.team/articles/citizens-assembly" target="_blank">Citizen assemblies will help save democracy (in Russian)</a></h2>
+        <p><em>DOXA</em></p>
+        <p>In this article I explore how citizen assemblies — randomly selected, demographically representative groups of citizens who deliberate on public issues — offer a promising response to the global crisis of representative democracy. Drawing on examples from Ireland, France, and Ukraine, I show how assemblies can build trust, reduce polarization, and produce legitimate, well-informed decisions on complex or controversial topics.</p>
+        <p>Citizen assemblies suggest a way of reimagining democratic participation from the ground up and alleviating some authoritarian tendencies, even though they're unlikely to be cured entirely. I argue that building such democratic infrastructure can help lay the foundation for a more just and participatory political future.</p>
+        <p><em>June 2025</em></p>
+      </section>
+
+    <section class="writing-entry">
+      <h2><a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19">Political polarisation impedes the public policy response to collective risk</a></h2>
+      <p><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics</em></p>
+      <p>Also in <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19"><em>Washington Post</em></a> and <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19"><em>CEPR / VoxEU</em></a></p>
+      <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. This column shows, however, that mask usage is strongly associated with political partisanship in the US. Using various research designs, it finds that localities which voted for Trump in 2016 are significantly less likely to wear masks, even if mask wearing is mandated. Leadership is shown to matter as well – tweets with positive sentiment towards masks surged after Trump wore a mask in public the first time. </p>
+      <p><em>Dec 2020</em></p>
+    </section>
+
+    <section class="writing-entry">
+      <h2><a href="https://publications.hse.ru/articles/310981596" target="_blank">Performance based management and meritocracy in Russian public service: experimental evidence</a></h2>
+      <p><em>Alexander Kalgin, Vyacheslav Matveev, Maria Milosh, Andrei Yakovlev</em></p>
+      <p>In recent years, Russian public authorities have increasingly formalized administrative processes and procedures. This study examines how the formalization of rules in Russian public administration affects job satisfaction and intentions to leave among civil servants. Based on a survey of 1,098 public employees, it finds that well-designed procedures (“green tape”) improve satisfaction, while excessive bureaucracy (“red tape”) harms it, contributing to potential talent loss.
+        A survey experiment also shows that merit-based hiring (personal achievements) is more important than personal connections, though dissatisfied employees are more likely to perceive hiring as driven by connections, indicating that perceived fairness is crucial for motivation and retention.</p>
+      <p>The study underscores the importance of meritocratic hiring practices and well-designed administrative procedures for retaining skilled workers in government. Excessive bureaucracy and perceived favoritism reduce satisfaction and increase attrition, while fair processes and effective rule design can strengthen institutional capacity by supporting a more committed and motivated workforce.</p>
+      <p><em>Dec 2019</em></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Maria Milosh
+    </footer>
+
+  </div>
+
+</body>
+</html>
