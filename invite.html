@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metagov Holiday Season Planning Discussion</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+    p {
+      max-width: 650px;
+      margin-bottom: 1.5rem;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://app.harmonica.chat/invitation.svg" alt="Invitation">
+  <h1>MetaGov Holiday Season Planning Discussion</h1>
+  <p>
+    As the year draws to a close, we’re inviting members of the MetaGov community to share their ideas for a holiday season activity.
+    What kinds of gatherings, events, or reflections could help us celebrate and strengthen our community?
+  </p>
+  <p>
+    This survey is hosted on Harmonica, a conversational survey platform.
+    You’ll chat with AI for around 10 minutes to share your ideas about holiday activities.
+
+  </p>
+  <p>
+    Please note: this is a solicitation of ideas and community input, not a commitment from MetaGov to implement specific activities.
+  </p>
+
+  <button id="startButton">Join the Conversation</button>
+
+  <footer>
+    Thank you for contributing!
+  </footer>
+
+  <script>
+    const links = [
+      "https://app.harmonica.chat/chat?s=hst_7ed01288c010",
+      "https://app.harmonica.chat/chat?s=hst_d95732e578c7",
+      "https://app.harmonica.chat/chat?s=hst_114a9c37730a",
+      "https://app.harmonica.chat/chat?s=hst_36fcf9f7033e"
+    ];
+
+    document.getElementById("startButton").addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * links.length);
+      window.location.href = links[randomIndex];
+    });
+  </script>
+</body>
+</html>
