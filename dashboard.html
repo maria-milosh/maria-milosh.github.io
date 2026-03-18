@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmonica Analysis Dashboard</title>
+  <style>
+    :root {
+      --ink: #14213d;
+      --muted: #5f6c7b;
+      --paper: #f8f6f1;
+      --card: #ffffff;
+      --line: #dde3ea;
+      --accent: #d97706;
+      --accent2: #2563eb;
+      --accent3: #dc2626;
+    }
+    body {
+      margin: 0;
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      background:
+        radial-gradient(circle at top left, rgba(217,119,6,0.12), transparent 32%),
+        linear-gradient(180deg, #fbfaf7 0%, #f2efe8 100%);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1, h2, h3 {
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 1.7rem; margin-top: 38px; }
+    p { color: var(--muted); font-size: 1rem; line-height: 1.6; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+    .panel, .card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 50px rgba(20,33,61,0.08);
+    }
+    .panel {
+      padding: 24px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card {
+      padding: 18px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .value {
+      font-size: 2rem;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .figure {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .figure.compact {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .story-card {
+      padding: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,246,241,0.95));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .story-card .value {
+      font-size: 2.2rem;
+    }
+    .story-card p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
+    }
+    .narrative {
+      margin-top: 18px;
+      padding: 18px 20px;
+      background: rgba(20,33,61,0.04);
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.7);
+      overflow: hidden;
+      border-radius: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .tiny {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 960px) {
+      .hero, .grid2, .story-grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="panel">
+        <div class="label">Dashboard</div>
+        <h1>Harmonica Session Analysis</h1>
+        <p>This dashboard compares the separate Phase 1 and Phase 2 cohorts, shows how winners depend on ranked-ballot aggregation, and tracks how reasoning and rankings shift inside Phase 2 after cross-pollination.</p>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Phase 1 plurality winner</div>
+            <div class="value">Urban Tree Initiative</div>
+          </div>
+          <div class="card">
+            <div class="label">Phase 2 initial plurality winner</div>
+            <div class="value">Community Food Pantry Network</div>
+          </div>
+          <div class="card">
+            <div class="label">Phase 2 final plurality winner</div>
+            <div class="value">Community Health Clinic</div>
+          </div>
+          <div class="card">
+            <div class="label">Top-choice changers</div>
+            <div class="value">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Session Context</h3>
+        <p class="tiny">This dashboard summarizes a two-phase deliberation exercise. Participants first ranked four donation options independently, then cross-pollinated by reviewing others' reasoning and submitting a final ranking in Phase 2.</p>
+        <table>
+          <thead><tr><th>context item</th><th>value</th></tr></thead>
+          <tbody>
+            <tr><td>Decision options</td><td>4 community interventions</td></tr>
+            <tr><td>Phase 2 participants</td><td>17</td></tr>
+            <tr><td>Cross-pollination lens</td><td>Ranking shifts and rationale shifts</td></tr>
+            <tr><td>Headline question</td><td>Did exposure to peers change preferences, ordering, or reasoning?</td></tr>
+          </tbody>
+        </table>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Switched top choice</div>
+            <div class="value">3/17 (18%)</div>
+          </div>
+          <div class="card">
+            <div class="label">Edited ranking</div>
+            <div class="value">7/17 (41%)</div>
+          </div>
+          <div class="card">
+            <div class="label">Changed themes in rationale</div>
+            <div class="value">16/17 (94%)</div>
+          </div>
+          
+        <div class="card">
+          <div class="label">Avg semantic overlap</div>
+          <div class="value">0.634</div>
+        </div>
+        <div class="card">
+          <div class="label">Avg semantic shift</div>
+          <div class="value">0.366</div>
+        </div>
+        <div class="card">
+          <div class="label">Random initial distance</div>
+          <div class="value">0.419</div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <h2>Cross-Pollination Readout</h2>
+    <div class="panel">
+      <p>The phase 2 effect is best understood as a ladder of change. A minority changed their winner, a larger group edited the ranking, and almost everyone revised the argument they used to justify that ranking.</p>
+      <div class="story-grid">
+        <div class="story-card">
+          <div class="label">Preference outcome</div>
+          <div class="value">3/17 (18%)</div>
+          <p>10 participants stayed fully put, while cross-pollination produced three outright first-place switches.</p>
+        </div>
+        <div class="story-card">
+          <div class="label">Ranking reshuffle</div>
+          <div class="value">7/17 (41%)</div>
+          <p>5 made a limited reorder and 2 made a larger reshuffle across the four options.</p>
+        </div>
+        <div class="story-card">
+          <div class="label">Rationale rewrite</div>
+          <div class="value">16/17 (94%)</div>
+          <p>1 kept the same theme set, 2 changed one theme, and 14 changed two or more themes.</p>
+        </div>
+      </div>
+      <div class="narrative">
+        Cross-pollination appears to have worked more as a reframing mechanism than a mass conversion mechanism. Most participants did not abandon their top option, but many re-ordered lower preferences and nearly all updated the reasons they gave for those preferences.
+      </div>
+      <table><thead><tr><th>layer</th><th>count</th><th>what it means</th></tr></thead><tbody><tr><td>Top-choice switch</td><td>3/17 (18%)</td><td>Participants changed which option they ranked first.</td></tr><tr><td>Any ranking edit</td><td>7/17 (41%)</td><td>Participants changed at least one position somewhere in the full ranking.</td></tr><tr><td>Theme rewrite</td><td>16/17 (94%)</td><td>Participants added or dropped at least one substantive theme in their rationale.</td></tr></tbody></table>
+    </div>
+
+    <h2>Vote Dynamics</h2>
+    <div class="grid2">
+      <div class="figure"><img src="figures/phase2_initial_vs_final_top_choice_votes.svg" alt="Phase 2 top choice grouped chart" /></div>
+      <div class="figure"><img src="figures/phase2_top_choice_transitions.svg" alt="Phase 2 transitions heatmap" /></div>
+      <div class="figure"><img src="figures/phase2_mean_rank_shift.svg" alt="Phase 2 mean rank shift dumbbell plot" /></div>
+    </div>
+
+    <h2>Which Options Benefited?</h2>
+    <div class="panel">
+      <p class="tiny">Community Health Clinic gained the most from cross-pollination, while Community Food Pantry lost its initial edge. Urban Tree Initiative also picked up support, mostly as an upward ranking move rather than a broad first-place takeover.</p>
+      <table><thead><tr><th>option</th><th>initial top votes</th><th>final top votes</th><th>net top-vote change</th><th>participants moving it up</th></tr></thead><tbody><tr><td>Community Animal Rescue Shelter</td><td>4</td><td>3</td><td>-1</td><td>0</td></tr><tr><td>Community Food Pantry Network</td><td>6</td><td>4</td><td>-2</td><td>0</td></tr><tr><td>Urban Tree Initiative</td><td>2</td><td>3</td><td>1</td><td>3</td></tr><tr><td>Community Health Clinic</td><td>5</td><td>7</td><td>2</td><td>4</td></tr></tbody></table>
+    </div>
+
+    <h2>Voting Rule Comparison</h2>
+    <div class="panel">
+      <p class="tiny">Only rules that are justified by ranked ballots are treated as primary results. Approval-style rules are excluded because the study captures rankings, not direct approvals.</p>
+      <table><thead><tr><th>rule</th><th>phase1</th><th>phase2_initial</th><th>phase2_final</th></tr></thead><tbody><tr><td>plurality</td><td>Urban Tree Initiative</td><td>Community Food Pantry Network</td><td>Community Health Clinic</td></tr><tr><td>borda</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td></tr><tr><td>instant_runoff</td><td>Urban Tree Initiative</td><td>Community Food Pantry Network</td><td>Community Health Clinic</td></tr><tr><td>condorcet</td><td>n/a</td><td>Community Food Pantry Network</td><td>Community Health Clinic</td></tr><tr><td>copeland</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Community Health Clinic</td></tr><tr><td>anti_plurality</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td></tr></tbody></table>
+    </div>
+
+    <h2>Reasoning Movement</h2>
+    <div class="panel">
+      <p class="tiny">The lollipop chart shows each participant's own embedding distance after cross-pollination, compared against the average distance between two different participants' initial reasonings.</p>
+    </div>
+    <div class="figure compact"><img src="figures/phase2_reasoning_shift_lollipop.svg" alt="Participant reasoning distance lollipop chart" /></div>
+
+    <h2>Participant Top-Choice Outcomes</h2>
+    <div class="panel">
+      <h3>Participants Who Changed Top Choice</h3>
+      <table><thead><tr><th>participant</th><th>top choice before</th><th>top choice after</th><th>wording shift</th><th>themes in initial</th><th>themes in final</th><th>theme moves</th></tr></thead><tbody><tr><td>b7252e46e281</td><td>Community Food Pantry Network</td><td>Urban Tree Initiative</td><td>Large rewrite</td><td>Deservingness targeting, Local community focus, Urgency basic needs</td><td>Cost effectiveness impact</td><td>4</td></tr><tr><td>ad571f253120</td><td>Community Food Pantry Network</td><td>Community Health Clinic</td><td>Noticeable rewrite</td><td>Cost effectiveness impact, Local community focus</td><td>Local community focus</td><td>1</td></tr><tr><td>8d4b92f5ba5d</td><td>Community Animal Rescue Shelter</td><td>Community Health Clinic</td><td>Noticeable rewrite</td><td>Deservingness targeting, Local community focus, Moral duty compassion</td><td>Local community focus</td><td>2</td></tr></tbody></table>
+    </div>
+    <div class="panel" style="margin-top: 18px;">
+      <p class="tiny">Stable top-choice participants can still show substantial reasoning movement even when the headline preference remains the same.</p>
+      <h3>Stable Participants</h3>
+      <table><thead><tr><th>participant</th><th>top choice before</th><th>top choice after</th><th>wording shift</th><th>themes in initial</th><th>themes in final</th><th>theme moves</th></tr></thead><tbody><tr><td>f80d4f54b108</td><td>Community Health Clinic</td><td>Community Health Clinic</td><td>Large rewrite</td><td>Deservingness targeting, Effectiveness skepticism, Local community focus</td><td>Moral duty compassion</td><td>4</td></tr><tr><td>3c5387b0da49</td><td>Community Health Clinic</td><td>Community Health Clinic</td><td>Large rewrite</td><td>Deservingness targeting, Local community focus</td><td>Deservingness targeting, Moral duty compassion</td><td>2</td></tr><tr><td>15f012a0dc2c</td><td>Urban Tree Initiative</td><td>Urban Tree Initiative</td><td>Large rewrite</td><td>Cost effectiveness impact</td><td>None</td><td>1</td></tr><tr><td>84b4783bae78</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Large rewrite</td><td>Deservingness targeting, Local community focus, Urgency basic needs</td><td>Deservingness targeting</td><td>2</td></tr><tr><td>455dbb067ce7</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Noticeable rewrite</td><td>Deservingness targeting</td><td>Personal connection identity</td><td>2</td></tr><tr><td>679457c68ee8</td><td>Urban Tree Initiative</td><td>Urban Tree Initiative</td><td>Noticeable rewrite</td><td>None</td><td>None</td><td>0</td></tr><tr><td>8948e22761d2</td><td>Community Health Clinic</td><td>Community Health Clinic</td><td>Noticeable rewrite</td><td>Deservingness targeting, Local community focus, Moral duty compassion, Urgency basic needs</td><td>Cost effectiveness impact, Local community focus, Urgency basic needs</td><td>3</td></tr><tr><td>60d929ceffa5</td><td>Community Food Pantry Network</td><td>Community Food Pantry Network</td><td>Noticeable rewrite</td><td>Deservingness targeting, Local community focus, Long term structural, Urgency basic needs</td><td>Urgency basic needs</td><td>3</td></tr></tbody></table>
+    </div>
+  </div>
+</body>
+</html>
