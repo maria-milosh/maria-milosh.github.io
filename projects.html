@@ -6,6 +6,10 @@
   <title>Projects | Maria Milosh</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
@@ -32,7 +36,11 @@
       margin: 0;
     }
 
-    nav a {
+    
+    .site-title-link { color: inherit; text-decoration: none; }
+    .site-title-link:visited, .site-title-link:hover, .site-title-link:focus { color: inherit; text-decoration: none; }
+
+nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #d4e2e2;
@@ -72,18 +80,39 @@
     }
 
     .project-entry {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
       margin-bottom: 2.5rem;
     }
 
+    .project-illustration {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(34, 201, 184, 0.35);
+      flex-shrink: 0;
+      margin-top: 0;
+    }
+
+    .project-content {
+      min-width: 0;
+    }
+
+    .project-content h2 {
+      margin-top: 0;
+    }
+
     .project-entry h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
       margin-bottom: 0.3rem;
       color: #22c9b8;
     }
 
     .project-entry p {
       margin: 0.2rem 0 0.4rem;
-      font-size: 1.3rem;
+      font-size: clamp(1rem, 2.7vw, 1.15rem);
     }
 
     .project-entry a {
@@ -104,6 +133,10 @@
     }
 
     @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -129,6 +162,20 @@
     nav a {
         padding: 0.5rem 1rem;
   }
+
+    .project-entry {
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-illustration {
+      width: 72px;
+      height: 72px;
+    }
+
+    .intro {
+      margin-bottom: 1.5rem;
+    }
 }
   </style>
 </head>
@@ -137,7 +184,7 @@
   <div class="container">
 
     <header>
-        <h1>Maria Milosh</h1>
+        <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-icon">&#9776;</label>
         <nav class="nav-links">
@@ -152,21 +199,27 @@
       <p class="intro"><em> Some of the things I'm engaged in</em></p>
 
       <section class="project-entry">
-        <h2><a href="assets/Civic Tech and Algorithms for Social Good.pdf">Teaching Civic Tech and Algorithms for Social Good @ Bard College</a></h2>
-        <p>In Spring 2026 I’m teaching Civic Tech and Algorithms for Social Good. The course grew directly out of my experience as a “tech person” in local government and the World Bank. Technology is used more and more in shaping our lives, often through algorithmic decision-making systems that claim to “do good.” In this course, we’ll slow that down and ask what “good” actually looks like, which problems are worth working on, and what trade-offs these systems create.</p>
-        <p><em>Spring 2026</em></p>
+        <img class="project-illustration" src="assets/heart.webp" alt="Heart illustration for Civic Tech course">
+        <div class="project-content">
+          <h2><a href="project-pages/project-civic-tech.html">Teaching Civic Tech and Algorithms for Social Good @ Bard College</a></h2>
+          <p>In Spring 2026 I’m teaching Civic Tech and Algorithms for Social Good.</p>
+        </div>
       </section>
 
       <section class="project-entry">
-        <h2><a href="https://www.peoplepowered.org/news-content/introducing-the-democracy-narratives-campaign">Democracy narratives research and campaign</a></h2>
-        <p>A new initiative to compile, develop, and promote compelling narratives that increase public support for and engagement in democracy. The Democracy Narratives Campaign brings together more than 30 organizations, research institutions, and funders working on democracy and communications. It is supported by initial funding from Switzerland’s Federal Department of Foreign Affairs.</p>
-        <p><em>2025-2027</em></p>
+        <img class="project-illustration" src="assets/DNA_Brand.webp" alt="Democracy narratives campaign illustration">
+        <div class="project-content">
+          <h2><a href="project-pages/project-democracy-narratives.html">Democracy narratives research and campaign</a></h2>
+          <p>A new initiative to compile, develop, and promote compelling narratives that increase public support for and engagement in democracy.</p>
+        </div>
       </section>
 
       <section class="project-entry">
-        <h2><a href="https://metagov.org/">AI and facilitation working group at MetaGov</a></a></h2>
-        <p>Designing experimental interventions to study deliberative facilitation techniques.</p>
-        <p><em>2025-2026</em></p>
+        <img class="project-illustration" src="assets/metagov.png" alt="MetaGov working group illustration">
+        <div class="project-content">
+          <h2><a href="project-pages/project-metagov.html">AI and facilitation working group at MetaGov</a></h2>
+          <p>Designing experimental interventions to study deliberative facilitation techniques.</p>
+        </div>
       </section>
       
 

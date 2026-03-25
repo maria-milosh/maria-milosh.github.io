@@ -6,6 +6,10 @@
   <title>Maria Milosh</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
@@ -32,7 +36,11 @@
       margin: 0;
     }
 
-    nav a {
+    
+    .site-title-link { color: inherit; text-decoration: none; }
+    .site-title-link:visited, .site-title-link:hover, .site-title-link:focus { color: inherit; text-decoration: none; }
+
+nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #d4e2e2;
@@ -91,14 +99,18 @@ section.profile a:hover {
 
   .bio {
     flex: 1;
-    min-width: 300px;
-    font-size: 20px;
+    min-width: 0;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
   }
 
   .bio ul {
     list-style: none;
     padding: 0;
     line-height: 1.5;
+  }
+
+  .bio ul li {
+    margin-bottom: 0.85rem;
   }
 
   .bio ul li::before {
@@ -113,15 +125,19 @@ section.profile a:hover {
 
   .social {
     margin-top: 2rem;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
     font-size: 18px;
   }
 
   .social a {
-    margin: 0 1rem;
+    margin: 0;
     text-decoration: none;
     color: #aaa;
     font-weight: 500;
+    padding: 0.35rem 0.5rem;
   }
 
   .social a:hover {
@@ -136,6 +152,14 @@ section.profile a:hover {
   }
 
   @media (max-width: 768px) {
+  .container {
+      padding: 0 1rem;
+  }
+
+  header h1 {
+      font-size: 1.7rem;
+  }
+
   .nav-links {
       display: none;
       flex-direction: column;
@@ -161,6 +185,26 @@ section.profile a:hover {
     nav a {
         padding: 0.5rem 1rem;
   }
+
+    .profile {
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .bio {
+      font-size: 1rem;
+    }
+
+    .social {
+      margin-top: 1.25rem;
+      justify-content: flex-start;
+      font-size: 1rem;
+    }
 }
   </style>
 </head>
@@ -169,7 +213,7 @@ section.profile a:hover {
   <div class="container">
 
     <header>
-      <h1>Maria Milosh</h1>
+      <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="nav-icon">&#9776;</label>
       <nav class="nav-links">
@@ -186,11 +230,8 @@ section.profile a:hover {
             <h3>I’m a social scientist and civic technologist focused on democratic innovation, participatory governance, and how people make policy decisions together.</h3>
         <ul>
           <li>I’m especially excited to explore how technology can help communities make better collective decisions, bring more people into the process, and support thoughtful deliberation at scale.</li>
-            <br></br>  
           <li>Currently I'm a non-resident fellow at <a href="https://www.publicpolicy.cornell.edu/cgd/">The Cornell Brooks Center on Global Democracy</a>, and a research lead at the <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group">Oxford Computational Political Science Group</a>, where I'm modeling deliberative decision-making as a collective choice mechanism under incomplete information and studying the effects of exposure to others’ arguments during deliberation.</li>
-            <br></br>
-            <li>In Spring 2026, I'll be teaching Civic Technology and Algorithms for Social Good at <a href="https://www.bard.edu/">Bard College</a>, NY.</li>
-            <br></br>
+            <li>In Spring 2026, I'm teaching Civic Technology and Algorithms for Social Good at <a href="https://www.bard.edu/">Bard College</a>, NY.</li>
             <li>Coming from Eastern Europe, I value democratic resilience and bring a few insights into the decline of civic institutions and how to invest in their durability. I’m open to data and policy consultancies and accept small pro-bono clients from Eastern Europe and Central Asia working to advance good governance and human rights.</li>
         </ul>
         </div>

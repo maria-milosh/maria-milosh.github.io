@@ -6,6 +6,10 @@
   <title>Writing | Maria Milosh</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
@@ -32,7 +36,11 @@
       margin: 0;
     }
 
-    nav a {
+    
+    .site-title-link { color: inherit; text-decoration: none; }
+    .site-title-link:visited, .site-title-link:hover, .site-title-link:focus { color: inherit; text-decoration: none; }
+
+nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #d4e2e2;
@@ -72,18 +80,39 @@
     }
 
     .writing-entry {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
       margin-bottom: 2.5rem;
     }
 
+    .writing-illustration {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(34, 201, 184, 0.35);
+      flex-shrink: 0;
+      margin-top: 0;
+    }
+
+    .writing-content {
+      min-width: 0;
+    }
+
+    .writing-content h2 {
+      margin-top: 0;
+    }
+
     .writing-entry h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
       margin-bottom: 0.3rem;
       color: #22c9b8;
     }
 
     .writing-entry p {
       margin: 0.2rem 0 0.4rem;
-      font-size: 1.3rem;
+      font-size: clamp(1rem, 2.7vw, 1.15rem);
     }
 
     .writing-entry a {
@@ -104,6 +133,10 @@
     }
 
     @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -129,6 +162,20 @@
     nav a {
         padding: 0.5rem 1rem;
   }
+
+    .writing-entry {
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .writing-illustration {
+      width: 72px;
+      height: 72px;
+    }
+
+    .intro {
+      margin-bottom: 1.5rem;
+    }
 }
   </style>
 </head>
@@ -137,7 +184,7 @@
   <div class="container">
 
     <header>
-        <h1>Maria Milosh</h1>
+        <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-icon">&#9776;</label>
         <nav class="nav-links">
@@ -151,33 +198,35 @@
       <p class="intro"> <em>Research and writing on democratic innovation, civic institutions, and policy</em></p>
 
       <section class="writing-entry">
-        <h2><a href="https://www.peoplepowered.org/news-content/impacts-of-citizens-assemblies-a-summary-of-the-latest-research">Impacts of Citizens’ Assemblies: A Summary of the Latest Research</a></h2>
-        <p>With Ryan Gem and the People Powered research committee, we collated scientific evidence on the effects of citizens' assemblies around the world and made it accessible and useful to practitioners, activists, and advocates in government and civil society.</p>
-        <p><em>January 2026</em></p>
+        <img class="writing-illustration" src="assets/impacts_pp.png" alt="Impacts of citizens' assemblies publication illustration">
+        <div class="writing-content">
+          <h2><a href="writing-impacts-citizens-assemblies.html">Impacts of Citizens’ Assemblies: A Summary of the Latest Research</a></h2>
+          <p>We collated scientific evidence on the effects of citizens' assemblies around the world and made it accessible and useful to practitioners, activists, and advocates in government and civil society. There's also a browsable collection of papers and illustrative cases, which will come in handy for democracy innovation practitioners.</p>
+        </div>
       </section>
 
     <section class="writing-entry">
-        <h2><a href="https://doxa.team/articles/citizens-assembly" target="_blank">Citizen assemblies will help save democracy (in Russian)</a></h2>
-        <p><em>DOXA</em></p>
-        <p>In this article I explore how citizen assemblies — randomly selected, demographically representative groups of citizens who deliberate on public issues — offer a promising response to the global crisis of representative democracy. Drawing on examples from Ireland, France, and Ukraine, I show how assemblies can build trust, reduce polarization, and produce legitimate, well-informed decisions on complex or controversial topics.</p>
-        <p><em>June 2025</em></p>
+        <img class="writing-illustration" src="assets/doxa.png" alt="DOXA publication illustration">
+        <div class="writing-content">
+          <h2><a href="writing-doxa-citizens-assemblies.html">Citizen assemblies will help save democracy</a></h2>
+          <p>In this article I explore how citizen assemblies offer a promising response to the global crisis of representative democracy. It's written in Russian (with a pinch of hot takes on participation in autocracies). This topic is still on the margins of Russian-language discourse and I’d love to help change that.</p>
+        </div>
       </section>
 
     <section class="writing-entry">
-      <h2><a href="https://www.sciencedirect.com/science/article/pii/S0047272721001742">Political polarisation impedes the public policy response to collective risk</a></h2>
-      <p><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics</em></p>
-      <p>Also in <a href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/"><em>Washington Post</em></a> and <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19"><em>CEPR / VoxEU</em></a></p>
-      <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. This column shows, however, that mask usage is strongly associated with political partisanship in the US. Using various research designs, it finds that localities which voted for Trump in 2016 are significantly less likely to wear masks, even if mask wearing is mandated. Leadership is shown to matter as well – tweets with positive sentiment towards masks surged after Trump wore a mask in public the first time. </p>
-      <p><em>Dec 2020</em></p>
+      <img class="writing-illustration" src="assets/masks3.jpeg" alt="Masks illustration for political polarisation research">
+      <div class="writing-content">
+        <h2><a href="writing-polarisation-collective-risk.html">Political polarisation impedes the public policy response to collective risk</a></h2>
+        <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. But in the US we still observe an ideological split that overrides local policy rules.</p>
+      </div>
     </section>
 
     <section class="writing-entry">
-      <h2><a href="https://publications.hse.ru/articles/310981596" target="_blank">Performance based management and meritocracy in Russian public service: experimental evidence</a></h2>
-      <p><em>Alexander Kalgin, Vyacheslav Matveev, Maria Milosh, Andrei Yakovlev</em></p>
-      <p>In recent years, Russian public authorities have increasingly formalized administrative processes and procedures. This study examines how the formalization of rules in Russian public administration affects job satisfaction and intentions to leave among civil servants. Based on a survey of 1,098 public employees, it finds that well-designed procedures (“green tape”) improve satisfaction, while excessive bureaucracy (“red tape”) harms it, contributing to potential talent loss.
-        A survey experiment also shows that merit-based hiring (personal achievements) is more important than personal connections, though dissatisfied employees are more likely to perceive hiring as driven by connections, indicating that perceived fairness is crucial for motivation and retention.</p>
-      <p>The study underscores the importance of meritocratic hiring practices and well-designed administrative procedures for retaining skilled workers in government. Excessive bureaucracy and perceived favoritism reduce satisfaction and increase attrition, while fair processes and effective rule design can strengthen institutional capacity by supporting a more committed and motivated workforce.</p>
-      <p><em>Dec 2019</em></p>
+      <img class="writing-illustration" src="assets/novgorod.jpg" alt="Red tape and public service motivation publication illustration">
+      <div class="writing-content">
+        <h2><a href="writing-russian-public-service.html">Performance based management and meritocracy in Russian public service: experimental evidence</a></h2>
+        <p>An experiment we conducted to tease out the effects of formalization of administrative processes on local public service in one of the regions of Russia.</p>
+      </div>
     </section>
 
     <footer>

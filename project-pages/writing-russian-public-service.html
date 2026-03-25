@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Performance Based Management and Meritocracy | Maria Milosh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Lato', sans-serif; background-color: #0e0e1c; color: #d4e2e2; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; flex-wrap: wrap; }
+    header h1 { font-size: 2rem; margin: 0; }
+    
+    .site-title-link { color: inherit; text-decoration: none; }
+    .site-title-link:visited, .site-title-link:hover, .site-title-link:focus { color: inherit; text-decoration: none; }
+
+nav a { margin-left: 1.5rem; text-decoration: none; color: #d4e2e2; }
+    nav a:hover { color: #22c9b8; }
+    .hero-image { width: min(100%, 760px); height: clamp(180px, 32vw, 300px); object-fit: cover; object-position: center; display: block; border-radius: 14px; border: 1px solid rgba(34, 201, 184, 0.35); margin: 0.75rem auto 1.5rem; }
+    h2 { color: #22c9b8; font-size: clamp(1.45rem, 4.2vw, 2rem); margin-bottom: 0.5rem; line-height: 1.25; }
+    p { font-size: clamp(1rem, 2.7vw, 1.15rem); line-height: 1.65; }
+    .meta { font-style: italic; color: #b7cccc; }
+    .external-link { display: inline-block; margin-top: 1rem; color: #22c9b8; text-decoration: none; }
+    footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #d4e2e2; }
+    @media (max-width: 768px) {
+      .container { padding: 0 1rem; }
+      header h1 { font-size: 1.7rem; }
+      nav { width: 100%; margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
+      nav a { margin-left: 0; margin-right: 0; padding: 0.35rem 0; }
+      .hero-image { height: clamp(160px, 45vw, 220px); margin: 0.5rem auto 1.25rem; }
+      h2 { font-size: clamp(1.35rem, 5.2vw, 1.65rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a class="site-title-link" href="../index.html">Maria Milosh</a></h1>
+      <nav>
+        <a href="../index.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../writing.html">Writing</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Performance based management and meritocracy in Russian public service: experimental evidence</h2>
+      <img class="hero-image" src="../assets/novgorod.jpg" alt="Red tape and public service motivation publication illustration">
+      <a class="external-link" href="https://publications.hse.ru/articles/310981596" target="_blank" rel="noopener noreferrer"><em>Alexander Kalgin, Vyacheslav Matveev, Maria Milosh, Andrei Yakovlev. 2019.</em></a>
+      <p>In recent years, Russian public authorities have increasingly formalized administrative processes and procedures. This study examines how the formalization of rules in Russian public administration affects job satisfaction and intentions to leave among civil servants. Based on a survey of 1,098 public employees, it finds that well-designed procedures ("green tape") improve satisfaction, while excessive bureaucracy ("red tape") harms it, contributing to potential talent loss. A survey experiment also shows that merit-based hiring (personal achievements) is more important than personal connections, though dissatisfied employees are more likely to perceive hiring as driven by connections, indicating that perceived fairness is crucial for motivation and retention.</p>
+      <p>The study underscores the importance of meritocratic hiring practices and well-designed administrative procedures for retaining skilled workers in government. Excessive bureaucracy and perceived favoritism reduce satisfaction and increase attrition, while fair processes and effective rule design can strengthen institutional capacity by supporting a more committed and motivated workforce.</p>
+      <!-- <p class="meta">Dec 2019</p> -->
+    </main>
+
+    <footer>&copy; 2026 Maria Milosh</footer>
+  </div>
+</body>
+</html>

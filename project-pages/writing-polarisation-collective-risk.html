@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Political Polarisation and Collective Risk | Maria Milosh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Lato', sans-serif; background-color: #0e0e1c; color: #d4e2e2; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; flex-wrap: wrap; }
+    header h1 { font-size: 2rem; margin: 0; }
+    
+    .site-title-link { color: inherit; text-decoration: none; }
+    .site-title-link:visited, .site-title-link:hover, .site-title-link:focus { color: inherit; text-decoration: none; }
+
+nav a { margin-left: 1.5rem; text-decoration: none; color: #d4e2e2; }
+    nav a:hover { color: #22c9b8; }
+    .hero-image { width: min(100%, 760px); height: clamp(180px, 32vw, 300px); object-fit: cover; object-position: center; display: block; border-radius: 14px; border: 1px solid rgba(34, 201, 184, 0.35); margin: 0.75rem auto 1.5rem; }
+    h2 { color: #22c9b8; font-size: clamp(1.45rem, 4.2vw, 2rem); margin-bottom: 0.5rem; line-height: 1.25; }
+    p { font-size: clamp(1rem, 2.7vw, 1.15rem); line-height: 1.65; }
+    .meta { font-style: italic; color: #b7cccc; }
+    .external-link { display: inline-block; margin-top: 1rem; color: #22c9b8; text-decoration: none; }
+    footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #d4e2e2; }
+    @media (max-width: 768px) {
+      .container { padding: 0 1rem; }
+      header h1 { font-size: 1.7rem; }
+      nav { width: 100%; margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
+      nav a { margin-left: 0; margin-right: 0; padding: 0.35rem 0; }
+      .hero-image { height: clamp(160px, 45vw, 220px); margin: 0.5rem auto 1.25rem; }
+      h2 { font-size: clamp(1.35rem, 5.2vw, 1.65rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a class="site-title-link" href="../index.html">Maria Milosh</a></h1>
+      <nav>
+        <a href="../index.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../writing.html">Writing</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Political polarisation impedes the public policy response to collective risk</h2>
+      <img class="hero-image" src="../assets/masks3.jpeg" alt="Masks illustration for political polarisation research">
+      <!-- <p><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics</em></p> -->
+      <a class="external-link" href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer"><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics.</em></a>
+      <em>Also in <a class="external-link" href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer"><em>Washington Post</em></a> and <a class="external-link" href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer"><em>CEPR / VoxEU.</em></em></a>
+      <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. Our paper shows, however, that mask usage is strongly associated with political partisanship in the US. Using various research designs, it finds that localities which voted for Trump in 2016 are significantly less likely to wear masks, even if mask wearing is mandated by local law. Leadership is shown to matter as well - tweets with positive sentiment towards masks surged after Trump wore a mask in public the first time.</p>
+      <img src="../assets/masks.webp" alt="Masks illustration for political polarisation research">
+      <p class="meta">Dec 2020</p>
+    </main>
+
+    <footer>&copy; 2026 Maria Milosh</footer>
+  </div>
+</body>
+</html>
