@@ -17,9 +17,12 @@
 
 nav a { margin-left: 1.5rem; text-decoration: none; color: #d4e2e2; }
     nav a:hover { color: #22c9b8; }
-    .hero-image { width: min(100%, 760px); height: clamp(180px, 32vw, 300px); object-fit: cover; object-position: center; display: block; border-radius: 14px; border: 1px solid rgba(34, 201, 184, 0.35); margin: 0.75rem auto 1.5rem; }
+    .hero-image { width: min(100%, 760px); height: auto; max-height: 420px; object-fit: contain; object-position: center; display: block; border-radius: 14px; border: 1px solid rgba(34, 201, 184, 0.35); margin: 0.75rem auto 1.5rem; }
     h2 { color: #22c9b8; font-size: clamp(1.45rem, 4.2vw, 2rem); margin-bottom: 0.5rem; line-height: 1.25; }
     p { font-size: clamp(1rem, 2.7vw, 1.15rem); line-height: 1.65; }
+    ul { margin: 0.75rem 0 1rem; padding-left: 1.4rem; }
+    li { margin-bottom: 0.45rem; }
+    li p { margin: 0; }
     .meta { font-style: italic; color: #b7cccc; }
     .external-link { display: inline-block; margin-top: 1rem; color: #22c9b8; text-decoration: none; }
     footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #d4e2e2; }
@@ -28,7 +31,7 @@ nav a { margin-left: 1.5rem; text-decoration: none; color: #d4e2e2; }
       header h1 { font-size: 1.7rem; }
       nav { width: 100%; margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
       nav a { margin-left: 0; margin-right: 0; padding: 0.35rem 0; }
-      .hero-image { height: clamp(160px, 45vw, 220px); margin: 0.5rem auto 1.25rem; }
+      .hero-image { width: 100%; height: auto; max-height: none; margin: 0.5rem auto 1.25rem; }
       h2 { font-size: clamp(1.35rem, 5.2vw, 1.65rem); }
     }
   </style>
@@ -49,10 +52,12 @@ nav a { margin-left: 1.5rem; text-decoration: none; color: #d4e2e2; }
       <img class="hero-image" src="../assets/Doxa2.png" alt="DOXA publication illustration">
       <a class="external-link" href="https://doxa.team/articles/citizens-assembly" target="_blank" rel="noopener noreferrer"><em>DOXA, June 2025</em></a>
       <p>In this article I explore how citizen assemblies — randomly selected, demographically representative groups of citizens who deliberate on public issues — offer a promising response to the global crisis of representative democracy. It's written in Russian (with a pinch of hot takes on participation in autocracies). This topic is still on the margins of Russian-language discourse and I’d love to help change that.</p>
-      <li><p>Some of the inspiring cases I cover:</p></li>
-      <li><p>🇮🇪 Ireland’s 2016-18 citizens’ assembly, which paved the way to legalizing abortion (classic!)</p></li>
-      <li><p>🇫🇷 Paris’ permanent assembly and its policy decisions on homelessness, accepted unanimously by the city council</p></li>
-      <li><p>🇺🇦 And the first mini-public experiment in Ukraine, held successfully despite and during the war.</p></li>
+      <p>Some of the inspiring cases I cover:</p>
+      <ul>
+        <li><p>🇮🇪 Ireland’s 2016-18 citizens’ assembly, which paved the way to legalizing abortion (classic!)</p></li>
+        <li><p>🇫🇷 Paris’ permanent assembly and its policy decisions on homelessness, accepted unanimously by the city council</p></li>
+        <li><p>🇺🇦 And the first mini-public experiment in Ukraine, held successfully despite and during the war.</p></li>
+      </ul>
       <!-- <p class="meta">June 2025</p> -->
     </main>
 
