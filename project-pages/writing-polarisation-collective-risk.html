@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0a1115;
+      --bg: #0e0e1c;
       --panel: rgba(18, 31, 38, 0.72);
       --text: #eaf4f2;
       --muted: #aac1bc;
@@ -27,10 +27,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at 8% 12%, rgba(47, 209, 181, 0.18), transparent 36%),
-        radial-gradient(circle at 90% 88%, rgba(113, 196, 236, 0.14), transparent 35%),
-        linear-gradient(145deg, #081015 0%, #0b171d 42%, #0a1115 100%);
+      background: #0e0e1c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -85,25 +82,17 @@
       text-decoration: none;
       color: var(--muted);
       font-weight: 600;
-      padding: 0.4rem 0.85rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      background: rgba(12, 24, 30, 0.5);
       transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
       margin: 0;
     }
 
     nav a:hover {
       color: var(--text);
-      border-color: rgba(100, 227, 204, 0.3);
-      background: rgba(24, 42, 49, 0.7);
     }
 
     nav a.active,
     nav a[aria-current="page"] {
       color: var(--text);
-      border-color: rgba(100, 227, 204, 0.5);
-      background: rgba(47, 209, 181, 0.16);
     }
 
     main {
@@ -286,10 +275,6 @@
       nav {
         width: 100%;
         gap: 0.7rem 1rem;
-      }
-
-      nav a {
-        padding: 0.35rem 0.75rem;
       }
 
       .project-entry,
