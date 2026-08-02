@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -156,7 +157,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -166,7 +166,7 @@
       height: 84px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -218,7 +218,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -228,7 +228,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -306,19 +306,20 @@
       <label for="nav-toggle" class="nav-icon">&#9776;</label>
       <nav class="nav-links">
         <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
         <a href="../projects.html" class="active" aria-current="page">Projects</a>
         <a href="../writing.html">Writing</a>
-        <a href="../datasets.html">Datasets</a>
+        <a href="../assets/Maria%20Milosh%20CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </header>
 
     <main>
-      <h2>Civic Tech & Algorithms for Social Good</h2>
+      <h2>Civic Tech &amp; Algorithms for Social Good</h2>
       <p>I designed and am teaching a course Civic Technology &amp; Algorithms for Social Good, which introduces students to normative, technical, and evaluative foundations for design and impact assessment of public interest tech.</p>
       <img class="hero-image" src="../assets/heart.webp" alt="Heart illustration for Civic Tech course">
       <p>The course grew directly out of my experience as a tech person in NYC's local government and the World Bank. Technology is used more and more in shaping our lives, often through algorithmic decision-making systems, non-profit tools, or commercial projects. In this course, we slow that down and ask what "good" actually looks like, what trade-offs these systems create, and how we can assess their impact on society and democracy.</p>
       <p class="meta">Spring 2026</p>
-      <p class="meta">See full syllabus <a href="../assets/CT&A_syllabus.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+      <p class="meta">See full syllabus <a href="../assets/CT%26A_syllabus.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
 
       <h3 class="section-title">Course Modules</h3>
       <section class="module-grid">

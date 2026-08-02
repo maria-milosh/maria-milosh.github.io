@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -156,7 +157,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -166,7 +166,7 @@
       height: 84px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -218,7 +218,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -228,7 +228,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -304,9 +304,10 @@
       <h1><a class="site-title-link" href="../index.html">Maria Milosh</a></h1>
       <nav>
         <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
         <a href="../projects.html" class="active" aria-current="page">Projects</a>
         <a href="../writing.html">Writing</a>
-        <a href="../datasets.html">Datasets</a>
+        <a href="../assets/Maria%20Milosh%20CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </header>
 
@@ -316,12 +317,14 @@
       <a class="external-link" href="https://www.peoplepowered.org/news-content/introducing-the-democracy-narratives-campaign" target="_blank" rel="noopener noreferrer">Open original project page</a>
       <p>A new initiative to compile, develop, and promote compelling narratives that increase public support for and engagement in democracy. The Democracy Narratives Campaign brings together more than 30 organizations, research institutions, and funders working on democracy and communications. It is supported by initial funding from Switzerland's Federal Department of Foreign Affairs.</p>
       <p>In March 2026, we've published a set of research briefs for this campaign. The brief maps the dominant narratives shaping how people understand democracy and identifies practical strategies for rebuilding support, engagement, and participation. It synthesizes evidence from over 150 studies from academic and practitioner publications, and insights from more than 40 organizations, researchers, and funders who are part of the DNA.</p>
-      <img class="hero-image" src="../assets/DNA3.png">
+      <img class="hero-image" src="../assets/DNA3.png" alt="Overview of the Democracy Narratives research brief">
       <p>What’s in the brief:</p>
-      <li><p>Five categories of democracy narratives that shape public attitudes — from outcomes-oriented to process-oriented — each paired with the counter-narrative it can address</p></li>
-      <li><p>Practical guidance on messaging: how values, audience, messenger, framing, and message structure all influence whether communications land</p></li>
-      <li><p>Real-world examples from Ghana, Tunisia, India, France, Ireland, and beyond</p></li>
-      <li><p>Do’s and don’ts for countering disengagement narratives: including why pre-bunking works and crisis framing doesn’t</p></li>
+      <ul>
+        <li>Five categories of democracy narratives that shape public attitudes — from outcomes-oriented to process-oriented — each paired with the counter-narrative it can address</li>
+        <li>Practical guidance on messaging: how values, audience, messenger, framing, and message structure all influence whether communications land</li>
+        <li>Real-world examples from Ghana, Tunisia, India, France, Ireland, and beyond</li>
+        <li>Do’s and don’ts for countering disengagement narratives, including why pre-bunking works and crisis framing doesn’t</li>
+      </ul>
       <p>Watch the report launch here:</p>
       <div class="video-embed">
         <iframe

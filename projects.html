@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -55,6 +56,7 @@
       color: var(--text);
       text-decoration: none;
       font-family: "Fraunces", serif;
+      font-size: clamp(1.6rem, 1.6vw, 2rem);
       letter-spacing: 0.02em;
     }
 
@@ -116,6 +118,11 @@
       margin: 1.8rem 0 0.8rem;
     }
 
+    .section-title {
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid rgba(148, 210, 195, 0.15);
+    }
+
     h4 {
       margin: 0 0 0.45rem;
       color: #d8fff7;
@@ -152,11 +159,9 @@
       gap: 1rem;
       align-items: flex-start;
       margin-bottom: 1.1rem;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      background: transparent;
+      border: none;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -166,7 +171,7 @@
       height: 184px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -180,7 +185,7 @@
     .project-entry h2,
     .writing-entry h2,
     .dataset-entry h2 {
-      font-size: clamp(1.2rem, 2.3vw, 1.45rem);
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
       margin: 0 0 0.2rem;
       color: var(--accent-strong);
     }
@@ -222,7 +227,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -232,7 +237,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -312,21 +317,21 @@
         <label for="nav-toggle" class="nav-icon">&#9776;</label>
         <nav class="nav-links">
           <a href="index.html">About</a>
+          <a href="research.html">Research</a>
           <a href="projects.html" class="active" aria-current="page">Projects</a>
           <a href="writing.html">Writing</a>
-          <a href="datasets.html">Datasets</a>
         </nav>
     </header>
 
     <main>
-      <h2>Projects</h2>
-      <p class="intro"><em> Some of the things I'm engaged in</em></p>
+      <!-- <h2 class="section-title">Projects</h2>
+      <p class="intro"><em>Applied collaborations, experiments, and teaching focused on democratic participation, deliberation, and civic technology.</em></p> -->
 
       <section class="project-entry">
-        <img class="project-illustration" src="assets/heart.webp" alt="Heart illustration for Civic Tech course">
+        <img class="project-illustration" src="assets/Mozilla.png" alt="Mozilla Democracy x AI Cohort illustration">
         <div class="project-content">
-          <h2><a href="project-pages/project-civic-tech.html">Teaching Civic Tech and Algorithms for Social Good @ Bard College</a></h2>
-          <p>I designed and am teaching a course Civic Technology & Algorithms for Social Good, which introduces students to normative, technical, and evaluative foundations for design and impact assessment of public interest tech.</p>
+          <h2><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/">Open Facilitation Library</a></h2>
+          <p>As digital deliberation becomes more prevalent, this project works to study what good online facilitation looks like, helping train people and AI to support collective decision-making. We are studying facilitation techniques in synchronous and asynchronous deliberative groups, focusing on discussion productivity and representativeness of the full range of perspectives.</p>
         </div>
       </section>
 
@@ -339,10 +344,10 @@
       </section>
 
       <section class="project-entry">
-        <img class="project-illustration" src="assets/metagov2.png" alt="MetaGov working group illustration">
+        <img class="project-illustration" src="assets/heart.webp" alt="Heart illustration for Civic Tech course">
         <div class="project-content">
-          <h2><a href="project-pages/project-metagov.html">AI and facilitation working group at MetaGov</a></h2>
-          <p>Designing experimental interventions to study deliberative facilitation techniques.</p>
+          <h2><a href="project-pages/project-civic-tech.html">Teaching Civic Tech and Algorithms for Social Good</a></h2>
+          <p>I designed and teach a course at Bard College on the normative, technical, and evaluative foundations of public-interest technology.</p>
         </div>
       </section>
       

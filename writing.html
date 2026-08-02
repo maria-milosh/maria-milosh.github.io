@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -55,6 +56,7 @@
       color: var(--text);
       text-decoration: none;
       font-family: "Fraunces", serif;
+      font-size: clamp(1.6rem, 1.6vw, 2rem);
       letter-spacing: 0.02em;
     }
 
@@ -110,10 +112,15 @@
 
     h3,
     .section-title {
-      color: var(--accent-strong);
+      /* color: var(--accent-strong); */
       font-family: "Fraunces", serif;
       font-size: clamp(1.2rem, 2.2vw, 1.5rem);
       margin: 1.8rem 0 0.8rem;
+    }
+
+    .section-title {
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid rgba(148, 210, 195, 0.15);
     }
 
     h4 {
@@ -135,6 +142,17 @@
       color: var(--muted);
     }
 
+    .section-kicker {
+      margin: 2.5rem 0 0.9rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid rgba(148, 210, 195, 0.15);
+    }
+
+    .entry-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     ul {
       margin: 0.5rem 0 1rem 1.2rem;
       padding: 0;
@@ -152,11 +170,9 @@
       gap: 1rem;
       align-items: flex-start;
       margin-bottom: 1.1rem;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      background: transparent;
+      border: none;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -166,7 +182,7 @@
       height: 184px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -180,7 +196,7 @@
     .project-entry h2,
     .writing-entry h2,
     .dataset-entry h2 {
-      font-size: clamp(1.2rem, 2.3vw, 1.45rem);
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
       margin: 0 0 0.2rem;
       color: var(--accent-strong);
     }
@@ -219,7 +235,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -229,7 +245,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -304,52 +320,60 @@
   <div class="container">
 
     <header>
-        <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
+        <h3><a class="site-title-link" href="index.html">Maria Milosh</a></h3>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-icon">&#9776;</label>
         <nav class="nav-links">
           <a href="index.html">About</a>
+          <a href="research.html">Research</a>
           <a href="projects.html">Projects</a>
           <a href="writing.html" class="active" aria-current="page">Writing</a>
-          <a href="datasets.html">Datasets</a>
         </nav>
     </header>
 
     <main>
-      <h2>Writing</h2>
-      <p class="intro"> <em>Research and writing on democratic innovation, civic institutions, and policy</em></p>
+      <!-- <h2 class="section-title">Writing</h2>
+      <p class="intro"><em>Reports, research syntheses, and public-facing essays on democratic innovation and civic institutions.</em></p> -->
+
+      <h3 class="section-kicker">Reports and research syntheses</h3>
 
       <section class="writing-entry">
         <img class="writing-illustration" src="assets/impacts_pp.png" alt="Impacts of citizens' assemblies publication illustration">
         <div class="writing-content">
           <h2><a href="project-pages/writing-impacts-citizens-assemblies.html">Impacts of Citizens’ Assemblies: A Summary of the Latest Research by People Powered</a></h2>
+          <p class="entry-meta">People Powered, Research synthesis, January 2026</p>
           <p>We collated scientific evidence on the effects of citizens' assemblies around the world and made it accessible and useful to practitioners, activists, and advocates in government and civil society. There's also a browsable collection of papers and illustrative cases, which will come in handy for democracy innovation practitioners.</p>
         </div>
       </section>
+
+      <section class="writing-entry">
+        <img class="writing-illustration" src="assets/Groundwork-30-Cover_IG-Square.webp" alt="Democracy narratives publication illustration">
+        <div class="writing-content">
+          <h2><a href="https://doi.org/10.62372/KDMT7557">Democracy narratives: what are they and how do they matter for democratic engagement and behavior?</a></h2>
+          <p class="entry-meta">People Powered & Busara, Research synthesis, January 2026</p>
+          <p>A systematic review of peer-reviewed academic literature alongside gray literature produced by organizations working on democracy and social change. This report explores how people’s mental models, communication environments, and lived experiences influence whether they participate in democratic processes or disengage from them.</p>
+        </div>
+      </section>
+
+      <section class="writing-entry">
+        <img class="writing-illustration" src="assets/Groundwork-31-Cover_IG-Square.webp" alt="From narrative to action publication illustration">
+        <div class="writing-content">
+          <h2><a href="https://doi.org/10.62372/VGEE3127">From narrative to action: fostering democratic engagement and engaged citizens</a></h2>
+          <p class="entry-meta">People Powered & Busara, Research synthesis, February 2026</p>
+          <p>A thought piece examining how narratives about democracy translate into real democratic behavior and participation. Drawing on behavioral science, it frames democracy as a set of everyday actions carried out by citizens and institutions. Using the COM-B behavior change model, the report outlines how capability, opportunity, and motivation shape whether people engage in democratic practices.</p>
+        </div>
+      </section>
+
+    <h3 class="section-kicker">Essays and commentary</h3>
 
     <section class="writing-entry">
         <img class="writing-illustration" src="assets/doxa.png" alt="DOXA publication illustration">
         <div class="writing-content">
           <h2><a href="project-pages/writing-doxa-citizens-assemblies.html">Citizen assemblies will help save democracy</a></h2>
+          <p class="entry-meta">DOXA, June 2025</p>
           <p>In this article I explore how citizen assemblies offer a promising response to the global crisis of representative democracy. It's written in Russian (with a pinch of hot takes on participation in autocracies). This topic is still on the margins of Russian-language discourse and I’d love to help change that.</p>
         </div>
       </section>
-
-    <section class="writing-entry">
-      <img class="writing-illustration" src="assets/masks3.jpeg" alt="Masks illustration for political polarisation research">
-      <div class="writing-content">
-        <h2><a href="project-pages/writing-polarisation-collective-risk.html">Political polarisation impedes the public policy response to collective risk</a></h2>
-        <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. But in the US we still observe an ideological split that overrides local policy rules.</p>
-      </div>
-    </section>
-
-    <section class="writing-entry">
-      <img class="writing-illustration" src="assets/novgorod.jpg" alt="Red tape and public service motivation publication illustration">
-      <div class="writing-content">
-        <h2><a href="project-pages/writing-russian-public-service.html">Performance based management and meritocracy in Russian public service: experimental evidence</a></h2>
-        <p>An experiment we conducted to tease out the effects of formalization of administrative processes on local public service in one of the regions of Russia.</p>
-      </div>
-    </section>
     </main>
 
     <footer>

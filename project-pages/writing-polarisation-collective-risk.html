@@ -9,14 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -155,7 +156,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -165,7 +165,7 @@
       height: 84px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -217,7 +217,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -227,7 +227,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -303,21 +303,22 @@
       <h1><a class="site-title-link" href="../index.html">Maria Milosh</a></h1>
       <nav>
         <a href="../index.html">About</a>
+        <a href="../research.html" class="active" aria-current="page">Research</a>
         <a href="../projects.html">Projects</a>
-        <a href="../writing.html" class="active" aria-current="page">Writing</a>
-        <a href="../datasets.html">Datasets</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../assets/Maria%20Milosh%20CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
     </header>
 
     <main>
-      <h2>Political polarisation impedes the public policy response to collective risk</h2>
+      <h2>Unmasking partisanship: Polarization undermines public response to collective risk</h2>
       <img class="hero-image" src="../assets/masks3.jpeg" alt="Masks illustration for political polarisation research">
       <!-- <p><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics</em></p> -->
-      <a class="external-link" href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer"><em>Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, Austin L. Wright. Journal of Public Economics.</em></a>
-      <em>Also in <a class="external-link" href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer"><em>Washington Post</em></a> and <a class="external-link" href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer"><em>CEPR / VoxEU.</em></em></a>
+      <p class="meta"><a class="external-link" href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer">Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, and Austin L. Wright. <em>Journal of Public Economics</em>, 2021.</a></p>
+      <p class="meta">Also covered in the <a class="external-link" href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer"><em>Washington Post</em></a> and <a class="external-link" href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer">CEPR / VoxEU</a>.</p>
       <p>As the use of face masks has been shown to effectively diminish the spread of COVID-19 without hampering economic activity, it should be among the least controversial public policy responses to the pandemic. Our paper shows, however, that mask usage is strongly associated with political partisanship in the US. Using various research designs, it finds that localities which voted for Trump in 2016 are significantly less likely to wear masks, even if mask wearing is mandated by local law. Leadership is shown to matter as well - tweets with positive sentiment towards masks surged after Trump wore a mask in public the first time.</p>
       <img class="hero-image" src="../assets/masks.webp" alt="Masks illustration for political polarisation research">
-      <p class="meta">Dec 2020</p>
+      <p class="meta">Journal of Public Economics, 2021</p>
     </main>
 
     <footer>&copy; 2026 Maria Milosh</footer>

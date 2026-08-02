@@ -9,15 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0e0e1c;
+      --bg: #0e191c;
       --bg-soft: #0f1a20;
-      --panel: rgba(18, 31, 38, 0.72);
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      /* --border: rgba(148, 210, 195, 0.05); */
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -28,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -50,7 +50,7 @@
       color: var(--text);
       text-decoration: none;
       font-family: "Fraunces", serif;
-      font-size: clamp(1.6rem, 2.6vw, 2rem);
+      font-size: clamp(1.6rem, 1.6vw, 2rem);
       letter-spacing: 0.02em;
     }
 
@@ -90,9 +90,9 @@
       align-items: start;
       gap: clamp(1.2rem, 3vw, 2.4rem);
       padding: 1.25rem;
-      border: 1px solid var(--border);
+      /* border: 1px solid var(--border); */
       background: var(--panel);
-      border-radius: 20px;
+      border-radius: 10px;
       box-shadow: var(--shadow);
     }
 
@@ -138,6 +138,14 @@
       max-width: 30ch;
     }
 
+    .bio h3 {
+      margin: 0 0 1rem;
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.45rem, 1.4vw, 2.05rem);
+      line-height: 1.3;
+      max-width: 34ch;
+    }
+
     .bio p {
       margin: 0 0 1rem;
       color: var(--muted);
@@ -174,28 +182,86 @@
       border-bottom-color: var(--accent-strong);
     }
 
-    .social {
+    .themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
       margin-top: 1.25rem;
+    }
+
+    .theme {
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(100, 227, 204, 0.3);
+      border-radius: 999px;
+      color: var(--accent-strong);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .featured {
+      margin-top: 3.5rem;
+    }
+
+    .featured h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      margin-bottom: 1rem;
+    }
+
+    .featured-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
-      gap: 0.8rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .featured-card {
+      padding: 1.1rem;
+      /* border: 1px solid rgba(148, 210, 195, 0.12); */
+      /* border-radius: 12px; */
+    }
+
+    .featured-card .label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .featured-card h3 {
+      margin: 0.4rem 0 0.55rem;
+      font-family: "Fraunces", serif;
+      font-size: 1.18rem;
+      line-height: 1.35;
+    }
+
+    .featured-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .featured-card a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+
+    .social {
+      margin-top: 3.25rem;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 600;
     }
 
     .social a {
       text-decoration: none;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.8rem 0.95rem;
-      background: rgba(10, 24, 29, 0.55);
-      font-weight: 600;
-      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+      color: var(--accent-strong);
+      margin: 0 0.35rem;
     }
 
-    .social a:hover {
-      transform: translateY(-2px);
-      border-color: rgba(100, 227, 204, 0.55);
-      background: rgba(23, 44, 51, 0.8);
+    .social a:hover,
+    .social a:focus-visible {
+      border-bottom: 1px solid var(--accent-strong);
     }
 
     a:focus-visible,
@@ -209,6 +275,18 @@
       margin-top: 2rem;
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--accent-strong);
+      border-bottom-color: var(--accent-strong);
     }
 
     @media (max-width: 840px) {
@@ -233,7 +311,7 @@
         max-width: 460px;
       }
 
-      .social {
+      .featured-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -242,12 +320,12 @@
 <body>
   <div class="container">
     <header>
-      <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
+      <h3><a class="site-title-link" href="index.html">Maria Milosh</a></h3>
       <nav class="nav-links">
         <a href="index.html" class="active" aria-current="page">About</a>
+        <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="writing.html">Writing</a>
-        <a href="datasets.html">Datasets</a>
       </nav>
     </header>
 
@@ -258,28 +336,49 @@
         </div>
 
         <div class="bio">
-          <!-- <span class="eyebrow">Computational Social Science + Civic Technology</span> -->
-          <h2>I’m a computational social scientist and civic technologist focused on self-governance, digital democracy, and algorithmic accountability.</h2>
-          <p>I’m exploring how technology changes democracy, either through helping communities make better collective decisions and supporting thoughtful deliberation at scale, or via gradual disempowerment and loss of accountability over democratic decisions.</p>
+          <h3>I’m a computational social scientist studying democratic innovations, participatory democracy, and how people make collective decisions.</h3>
+          <p>I focus on democratic innovation, social choice, and civic technology, with a particular interest in citizens’ assemblies and preference aggregation.</p>
+          <p>Currently, I’m a pre-doctoral fellow at the <a href="https://datascience.uchicago.edu/research/data-democracy/">Data &amp; Democracy Initiative</a> at the University of Chicago’s Data Science Institute and a non-resident fellow at the <a href="https://www.publicpolicy.cornell.edu/cgd/" target="_blank" rel="noopener noreferrer">Cornell Brooks Center on Global Democracy</a>.</p>
+          <!-- <div class="themes" aria-label="Research areas"> -->
+            <!-- <span class="theme">Democratic innovation</span>
+            <span class="theme">Social choice</span>
+            <span class="theme">Deliberation</span>
+            <span class="theme">Civic technology</span> -->
+          <!-- </div> -->
+        </div>
+      </section>
 
-          <ul>
-            <li>Currently I'm a non-resident fellow at <a href="https://www.publicpolicy.cornell.edu/cgd/" target="_blank" rel="noopener noreferrer">The Cornell Brooks Center on Global Democracy</a>, investigating automation and delegation of democratic and adjudicative processes to AI; and a research lead at the <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group" target="_blank" rel="noopener noreferrer">Oxford Computational Political Science Group</a>, studying how exposure to others' reasoning shapes deliberation outcomes.</li>
-            <li>Starting Summer 2026, I will join the <a href="https://datascience.uchicago.edu/research/data-democracy/">Data & Democracy Initiative</a> at UChicago's Data Science Institute.</li>
-            <li>Coming from Eastern Europe, I care deeply about democratic resilience and support data and policy consulting, including select pro-bono work with organizations in Eastern Europe and Central Asia advancing good governance and human rights.</li>
-          </ul>
+      <section class="featured" aria-labelledby="featured-heading">
+        <h2 id="featured-heading">Featured work</h2>
+        <div class="featured-grid">
+          <article class="featured-card">
+            <span class="label">Research</span>
+            <h3><a href="projects.html">Segregation metrics</a></h3>
+            <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran's I.</p>
+          </article>
+          <article class="featured-card">
+            <span class="label">Writing</span>
+            <h3><a href="project-pages/writing-impacts-citizens-assemblies.html">Impacts of citizens’ assemblies</a></h3>
+            <p>An accessible synthesis of evidence from nearly 70 studies of citizens’ assemblies worldwide.</p>
+          </article>
+          <article class="featured-card">
+            <span class="label">Current project</span>
+            <h3><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/">Mozilla Democracy x AI Cohort</a></h3>
+            <p>Researching how facilitation shapes the exchange of ideas in digital deliberation.</p>
+          </article>
         </div>
       </section>
 
       <section class="social" aria-label="Contact and profiles">
-        <a href="mailto:mm3595@cornell.edu">💌 Shoot me an email</a>
+        <a href="mailto:mm3595@cornell.edu">💌 Email </a>  
         <a href="https://www.linkedin.com/in/maria-milosh/" target="_blank" rel="noopener noreferrer">👩‍💻 LinkedIn</a>
-        <a href="https://substack.com/@mariamilosh" target="_blank" rel="noopener noreferrer">✍️ Substack</a>
-        <a href="assets/Maria Milosh CV.pdf" target="_blank" rel="noopener noreferrer">📎 Curriculum Vitae</a>
+        <a href="https://substack.com/@mariamilosh" target="_blank" rel="noopener noreferrer">✍️ Substack</a>  
+        <a href="assets/Maria%20Milosh%20CV.pdf" target="_blank" rel="noopener noreferrer">📎 Curriculum Vitae</a>
       </section>
     </main>
 
     <footer>
-      &copy; 2026 Maria Milosh
+      &copy; 2026 Maria Milosh</a>
     </footer>
   </div>
 </body>

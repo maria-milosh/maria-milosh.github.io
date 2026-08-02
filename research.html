@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Datasets | Maria Milosh</title>
+  <title>Research | Maria Milosh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     :root {
-      --bg: #0e0e1c;
-      --panel: rgba(18, 31, 38, 0.72);
+      --bg: #0e191c;
+      --bg-soft: #0f1a20;
+      /* --panel: rgba(18, 31, 38, 0.72); */
       --text: #eaf4f2;
       --muted: #aac1bc;
       --accent: #2fd1b5;
       --accent-strong: #64e3cc;
-      --border: rgba(148, 210, 195, 0.22);
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(148, 210, 195, 0.05);
+      /* --shadow: 0 20px 50px rgba(0, 0, 0, 0.35); */
     }
 
     * {
@@ -27,7 +28,7 @@
       margin: 0;
       font-family: "Source Sans 3", sans-serif;
       color: var(--text);
-      background: #0e0e1c;
+      background: #0e171c;
       min-height: 100vh;
       line-height: 1.6;
     }
@@ -55,6 +56,7 @@
       color: var(--text);
       text-decoration: none;
       font-family: "Fraunces", serif;
+      font-size: clamp(1.6rem, 1.6vw, 2rem);
       letter-spacing: 0.02em;
     }
 
@@ -101,19 +103,28 @@
     }
 
     h2 {
-      color: var(--accent-strong);
+      /* color: var(--accent-strong); */
       font-family: "Fraunces", serif;
       font-size: clamp(1.4rem, 3vw, 2rem);
       line-height: 1.25;
       margin: 0.2rem 0 0.8rem;
     }
 
-    h3,
-    .section-title {
+    h3
+    {
       color: var(--accent-strong);
       font-family: "Fraunces", serif;
-      font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
       margin: 1.8rem 0 0.8rem;
+    }
+
+    .section-title {
+      /* color: var(--accent-strong); */
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin: 1.9rem 0 0.8rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid rgba(148, 210, 195, 0.15);
     }
 
     h4 {
@@ -133,6 +144,39 @@
     .meta,
     .resource-note {
       color: var(--muted);
+    }
+
+    .research-agenda {
+      max-width: 78ch;
+      margin-bottom: 2.4rem;
+    }
+
+    .research-entry {
+      margin-bottom: 1.1rem;
+      padding: 1.1rem 0;
+    }
+
+    .research-entry h3 {
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+      margin: 0.25rem 0 0.35rem;
+    }
+
+    .research-entry p {
+      margin: 0.35rem 0;
+      max-width: 102ch;
+    }
+
+    .publication-meta,
+    .topic-label {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .topic-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     ul {
@@ -156,7 +200,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 0.95rem;
-      box-shadow: var(--shadow);
     }
 
     .project-illustration,
@@ -166,7 +209,7 @@
       height: 184px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       flex-shrink: 0;
       margin-top: 0;
     }
@@ -219,7 +262,7 @@
       object-position: center;
       display: block;
       border-radius: 14px;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       margin: 0.75rem auto 1.25rem;
       background: rgba(7, 17, 21, 0.45);
     }
@@ -229,7 +272,7 @@
       margin: 1rem auto 1.5rem;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(34, 201, 184, 0.35);
+      border: 1px solid rgba(180, 221, 212, 0.35);
       aspect-ratio: 16 / 9;
     }
 
@@ -304,38 +347,54 @@
   <div class="container">
 
     <header>
-        <h1><a class="site-title-link" href="index.html">Maria Milosh</a></h1>
+        <h3><a class="site-title-link" href="index.html">Maria Milosh</a></h3>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-icon">&#9776;</label>
         <nav class="nav-links">
           <a href="index.html">About</a>
+          <a href="research.html" class="active" aria-current="page">Research</a>
           <a href="projects.html">Projects</a>
           <a href="writing.html">Writing</a>
-          <a href="datasets.html" class="active" aria-current="page">Datasets</a>
         </nav>
     </header>
 
     <main>
-      <h2>Datasets</h2>
-      <p class="intro"><em>I collated a few datasets around protests, social media, and technology steering collective actions. I used web-scraping to gather the core data for these, sometimes corroborated by additional sources. In some sense they are digital social movement archives not available online anymore. They are available for public use either directly or on demand for research purposes.</em></p>
+      <!-- <h2>Research</h2> -->
+      <!-- <p class="intro research-agenda"><em>I study how institutions and technologies shape deliberation, preference formation, and collective choice. My current work connects democratic innovations with social choice and computational approaches to group decision-making.</em></p> -->
 
-      <section class="dataset-entry">
-        <img class="dataset-illustration" src="assets/hong_kong.jpg" alt="Hong Kong protests dataset illustration">
-        <div class="dataset-content">
-          <h2><a href="https://github.com/maria-milosh/hkmaplive_data">Hong Kong Protests Dataset (2019-20)</a></h2>
-          <p>A granular, crowdsourced data covering protest activity in Hong Kong during 2019-2020. The dataset is geospatial and time-granular (3-10 minute intervals), enabling fine-grained analysis of where and when events unfolded.</p>
-          <p>See description on <a href="https://medium.com/@maria-milosh/mapping-a-city-in-protest-how-dissenters-and-police-moved-across-hong-kong-ccd290fff8f0">Medium</a>.</p>
-        </div>
-      </section>
+      <h2 class="section-title">Current research</h2>
+      <article class="research-entry">
+        <span class="topic-label">Deliberation, Social choice</span>
+        <h3>Efficient facilitation in online deliberative settings</h3>
+        <p>As online deliberative platforms become more prevalent, we are investigating how to make sure that discussions and decision-making processes in these digital environments are productive and reflect the full range of perspectives. In partnership with two digital deliberative platforms, <a href="https://crown-shy.com/products/comhairle" target="_blank" rel="noopener noreferrer">CrownShy's Comhairle</a> and <a href="https://harmonica.chat/" target="_blank" rel="noopener noreferrer">Harmonica</a>, we are testing interventions to improve user engagement and decision quality. This project is part of Mozilla Foundation's <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/" target="_blank" rel="noopener noreferrer">Democracy x AI</a> cohort.</p>
+        <p class="publication-meta">Work in progress</p>
+      </article>
+      <article class="research-entry">
+        <span class="topic-label">Segregation, Spatial analysis</span>
+        <h3>Segregation metrics</h3>
+        <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran's I.</p>
+        <p class="publication-meta">Work in progress</p>
+      </article>
 
-      <section class="dataset-entry">
-        <img class="dataset-illustration" src="assets/vk.png" alt="VK protest pages dataset illustration">
-        <div class="dataset-content">
-          <h2>VK Anti-Government Protest Pages Archive (2017-18)</h2>
-          <p>A dataset derived from my 2018 archive of anti-government protest event pages on VK, a popular Russian social media platform. The collection is aggregated and anonymized for research and analysis.</p>
-        </div>
-      </section>
+      <h2 class="section-title">Peer-reviewed publications</h2>
+      <article class="research-entry">
+        <span class="topic-label">Political behaviour, Local policy, Collective response to risk</span>
+        <h3><a href="project-pages/writing-polarisation-collective-risk.html">Unmasking partisanship: Polarization undermines public response to collective risk</a></h3>
+        <p class="publication-meta">Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, and Austin L. Wright. <em>Journal of Public Economics</em>, 2021.</p>
+        <p>We show that political partisanship strongly predicted mask use in the United States (regardless of where local policy mandated it!), illustrating how political identity can impede responses to shared risks.</p>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer">Washington Post</a> · <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer">VoxEU</a></p>
+      </article>
 
+      <h2 class="section-title">Earlier data projects</h2>
+      <p class="intro">Archived datasets on protest activity, social media, and technology-mediated collective action.</p>
+      <article class="research-entry">
+        <h3><a href="https://doi.org/10.7910/DVN/D6F234">Hong Kong Protests Dataset, 2019–20</a></h3>
+        <p>A granular geospatial archive of crowdsourced protest activity, available through <a href="https://doi.org/10.7910/DVN/D6F234" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a>. See description on <a href="https://medium.com/@maria-milosh/mapping-a-city-in-protest-how-dissenters-and-police-moved-across-hong-kong-ccd290fff8f0" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+      </article>
+      <article class="research-entry">
+        <h3><a href="">Russian Anti-Corruption Protests on Social Media, 2017–18</a></h3>
+        <p>An aggregated and anonymized archive of anti-government protest event pages on VK.</p>
+      </article>
     </main>
 
     <footer>
