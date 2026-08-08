@@ -209,9 +209,9 @@
     }
 
     .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .featured-card {
@@ -243,6 +243,25 @@
     .featured-card a {
       color: var(--accent-strong);
       text-decoration: none;
+    }
+
+    .featured-card.has-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .card-media img,
+    .card-media iframe {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .card-media iframe {
+      aspect-ratio: 16 / 9;
+      border: none;
     }
 
     .social {
@@ -310,7 +329,7 @@
         max-width: 460px;
       }
 
-      .featured-grid {
+      .featured-card.has-media {
         grid-template-columns: 1fr;
       }
     }
@@ -344,20 +363,30 @@
       <section class="featured" aria-labelledby="featured-heading">
         <h2 id="featured-heading">Featured work</h2>
         <div class="featured-grid">
+          <article class="featured-card has-media">
+            <div class="card-content">
+              <span class="label">Webinar</span>
+              <h3><a href="project-pages/writing-impacts-citizens-assemblies.html">What have we learned after 1,000+ citizens’ assemblies around the world?</a></h3>
+              <p>Hosted by People Powered, FIDE - North America and Global Citizens’ Assembly Network, this conversation brought together researchers, practitioners, and a participant from Lexington, Kentucky’s first ever citizens’ assembly.</p>
+            </div>
+            <div class="card-media">
+              <iframe src="https://www.youtube.com/embed/7QmudgYujLg" title="What have we learned after 1,000+ citizens’ assemblies around the world?" allowfullscreen></iframe>
+            </div>
+          </article>
+          <article class="featured-card has-media">
+            <div class="card-content">
+              <span class="label">Current project</span>
+              <h3><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/">Mozilla Democracy x AI Cohort</a></h3>
+              <p>With Metagov's Open Facilitation Library, we're researching how to help self-reflection and thoughtful argumentation in digital deliberation settings.</p>
+            </div>
+            <div class="card-media">
+              <img src="assets/Mozilla-1.png" alt="Mozilla Democracy x AI Cohort" />
+            </div>
+          </article>
           <article class="featured-card">
             <span class="label">Research</span>
             <h3><a href="projects.html">Segregation metrics</a></h3>
-            <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran's I.</p>
-          </article>
-          <article class="featured-card">
-            <span class="label">Writing</span>
-            <h3><a href="project-pages/writing-impacts-citizens-assemblies.html">Impacts of citizens’ assemblies</a></h3>
-            <p>An accessible synthesis of evidence from nearly 70 studies of citizens’ assemblies worldwide.</p>
-          </article>
-          <article class="featured-card">
-            <span class="label">Current project</span>
-            <h3><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/">Mozilla Democracy x AI Cohort</a></h3>
-            <p>Researching how facilitation shapes the exchange of ideas in digital deliberation.</p>
+            <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran’s I.</p>
           </article>
         </div>
       </section>
