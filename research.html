@@ -152,8 +152,24 @@
     }
 
     .research-entry {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
       margin-bottom: 1.1rem;
       padding: 1.1rem 0;
+    }
+
+    .research-illustration {
+      width: 284px;
+      height: 184px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(180, 221, 212, 0.35);
+      flex-shrink: 0;
+    }
+
+    .research-content {
+      min-width: 0;
     }
 
     .research-entry h3 {
@@ -334,6 +350,17 @@
         max-width: 100%;
       }
 
+      .research-entry {
+        display: block;
+      }
+
+      .research-illustration {
+        width: 110px;
+        height: 75px;
+        display: block;
+        margin-bottom: 0.75rem;
+      }
+
       .project-illustration,
       .writing-illustration,
       .dataset-illustration {
@@ -370,36 +397,51 @@
 
       <h2 class="section-title">Current research</h2>
       <article class="research-entry">
-        <span class="topic-label">Deliberation, Social choice</span>
-        <h3>Efficient facilitation in online deliberative settings</h3>
-        <p>As online deliberative platforms become more prevalent, we are investigating how to make sure that discussions and decision-making processes in these digital environments are productive and reflect the full range of perspectives. In partnership with two digital deliberative platforms, <a href="https://crown-shy.com/products/comhairle" target="_blank" rel="noopener noreferrer">CrownShy's Comhairle</a> and <a href="https://harmonica.chat/" target="_blank" rel="noopener noreferrer">Harmonica</a>, we are testing interventions to improve user engagement and decision quality. This project is part of Mozilla Foundation's <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/" target="_blank" rel="noopener noreferrer">Democracy x AI</a> cohort.</p>
-        <p class="publication-meta">Work in progress</p>
+        <img class="research-illustration" src="assets/Glarner_Landsgemeinde.jpg" alt="Citizens gathered at the Glarus Landsgemeinde open-air assembly">
+        <div class="research-content">
+          <span class="topic-label">Deliberation, Social choice</span>
+          <h3>Efficient facilitation in online deliberative settings</h3>
+          <p>As online deliberative platforms become more prevalent, we are investigating how to make sure that discussions and decision-making processes in these digital environments are productive and reflect the full range of perspectives. In partnership with two digital deliberative platforms, <a href="https://crown-shy.com/products/comhairle" target="_blank" rel="noopener noreferrer">CrownShy's Comhairle</a> and <a href="https://harmonica.chat/" target="_blank" rel="noopener noreferrer">Harmonica</a>, we are testing interventions to improve user engagement and decision quality. This project is part of Mozilla Foundation's <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/democracy-ai-cohort/" target="_blank" rel="noopener noreferrer">Democracy x AI</a> cohort.</p>
+          <p class="publication-meta">Work in progress</p>
+        </div>
       </article>
       <article class="research-entry">
-        <span class="topic-label">Segregation, Spatial analysis</span>
-        <h3>Segregation metrics</h3>
-        <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran's I.</p>
-        <p class="publication-meta">Work in progress</p>
+        <img class="research-illustration" src="assets/Chicago_cluster.png" alt="Radial visualization of a Chicago spatial cluster">
+        <div class="research-content">
+          <span class="topic-label">Segregation, Spatial analysis</span>
+          <h3>Segregation metrics</h3>
+          <p>We are developing and testing a new network-based metric to measure racial segregation and compare its performance to well-established metrics such as the dissimilarity index and Moran's I.</p>
+          <p class="publication-meta">Work in progress</p>
+        </div>
       </article>
 
       <h2 class="section-title">Peer-reviewed publications</h2>
       <article class="research-entry">
-        <span class="topic-label">Political behaviour, Local policy, Collective response to risk</span>
-        <h3><a href="project-pages/writing-polarisation-collective-risk.html">Unmasking partisanship: Polarization undermines public response to collective risk</a></h3>
-        <p class="publication-meta">Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, and Austin L. Wright. <em>Journal of Public Economics</em>, 2021.</p>
-        <p>We show that political partisanship strongly predicted mask use in the United States (regardless of where local policy mandated it!), illustrating how political identity can impede responses to shared risks.</p>
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer">Washington Post</a> · <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer">VoxEU</a></p>
+        <img class="research-illustration" src="assets/masks3.jpeg" alt="Face masks on US flag">
+        <div class="research-content">
+          <span class="topic-label">Political behaviour, Local policy, Collective response to risk</span>
+          <h3><a href="project-pages/writing-polarisation-collective-risk.html">Unmasking partisanship: Polarization undermines public response to collective risk</a></h3>
+          <p class="publication-meta">Maria Milosh, Marcus Painter, Konstantin Sonin, David Van Dijcke, and Austin L. Wright. <em>Journal of Public Economics</em>, 2021.</p>
+          <p>We show that political partisanship strongly predicted mask use in the United States (regardless of where local policy mandated it!), illustrating how political identity can impede responses to shared risks.</p>
+          <p><a href="https://www.sciencedirect.com/science/article/pii/S0047272721001742" target="_blank" rel="noopener noreferrer">Paper</a> · <a href="https://www.washingtonpost.com/outlook/2021/04/13/masks-mandate-partisanship-politics/" target="_blank" rel="noopener noreferrer">Washington Post</a> · <a href="https://cepr.org/voxeu/columns/political-polarisation-impedes-public-policy-response-covid-19" target="_blank" rel="noopener noreferrer">VoxEU</a></p>
+        </div>
       </article>
 
       <h2 class="section-title">Earlier data projects</h2>
       <p class="intro">Archived datasets on protest activity, social media, and technology-mediated collective action.</p>
       <article class="research-entry">
-        <h3><a href="https://doi.org/10.7910/DVN/D6F234">Hong Kong Protests Dataset, 2019–20</a></h3>
-        <p>A granular geospatial archive of crowdsourced protest activity, available through <a href="https://doi.org/10.7910/DVN/D6F234" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a>. See description on <a href="https://medium.com/@maria-milosh/mapping-a-city-in-protest-how-dissenters-and-police-moved-across-hong-kong-ccd290fff8f0" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+        <img class="research-illustration" src="assets/hk_map.webp" alt="Map of protest activity in Hong Kong">
+        <div class="research-content">
+          <h3><a href="https://doi.org/10.7910/DVN/D6F234">Hong Kong Protests Dataset, 2019–20</a></h3>
+          <p>A granular geospatial archive of crowdsourced protest activity, available through <a href="https://doi.org/10.7910/DVN/D6F234" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a>. See description on <a href="https://medium.com/@maria-milosh/mapping-a-city-in-protest-how-dissenters-and-police-moved-across-hong-kong-ccd290fff8f0" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+        </div>
       </article>
       <article class="research-entry">
-        <h3><a href="">Russian Anti-Corruption Protests on Social Media, 2017–18</a></h3>
-        <p>An aggregated and anonymized archive of anti-government protest event pages on VK.</p>
+        <img class="research-illustration" src="assets/vk.png" alt="protest for internet freedom in russia">
+        <div class="research-content">
+          <h3><a href="">Russian Anti-Corruption Protests on Social Media, 2017–18</a></h3>
+          <p>An aggregated and anonymized archive of anti-government protest event pages on VK.</p>
+        </div>
       </article>
     </main>
 
